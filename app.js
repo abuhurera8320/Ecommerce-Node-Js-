@@ -151,7 +151,7 @@ app.use('/users', users);
 app.use('/', pages);
 
 // Start the server
-var port = 5000;
+var port = process.env.PORT ||5000;
 app.listen(port, function () {
-    console.log('Server started on port ' + port);
+    console.log(`app is running on ${port}`);
 });
